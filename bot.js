@@ -13,15 +13,15 @@ client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!developers.includes(message.author.id)) return;
 
-if (message.content.startsWith('.Wt')) {
+if (message.content.startsWith('Rwt')) {
 client.user.setActivity(argresult, {type:'WATCHING'});
     message.channel.send(`${argresult} \` `)
 } else 
-if (message.content.startsWith('.Ls')) {
+if (message.content.startsWith('Rls')) {
 client.user.setActivity(argresult , {type:'LISTENING'});
     message.channel.send(` ${argresult} \` `)
 } else 
-if (message.content.startsWith('.St')) {
+if (message.content.startsWith('Rst')) {
   client.user.setGame(argresult, "https://www.twitch.tv/MeeRcY");
    message.channel.send(`${argresult} \` `)
 }
