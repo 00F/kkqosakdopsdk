@@ -6,7 +6,7 @@ const developers = ['463698464845594628'];
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity("Do Not Love Those Who Do Not Love You",{type: 'LISTENING'})
-  client.user.setStatus("idle")
+  client.user.setStatus("dnd")
 });
 
 client.on('message', message => {
