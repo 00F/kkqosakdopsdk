@@ -5,7 +5,7 @@ const developers = ['463698464845594628'];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`~`,'https://www.twitch.tv/MeeRcY')
+  cclient.user.setActivity("Do Not Love Those Who Do Not Love You",{type: 'LISTENING'})
   client.user.setStatus("idle")
 });
 
@@ -30,7 +30,7 @@ if (message.content.startsWith('.St')) {
 client.on('message', message => {
         if (!developers.includes(message.author.id)) return;
   if (message.content === '712') {
-  let channel = client.channels.get('444873938691031040');
+  let channel = client.channels.get('458667409574723584');
 
   channel.join()
   .then(connection => console.log('Connected'))
