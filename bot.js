@@ -5,7 +5,7 @@ const developers = ['463698464845594628','320423357709549568'];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Do Not Love Those Who Do Not Love You",{type: 'LISTENING'})
+  client.user.setActivity("--",{type: 'LISTENING'})
   client.user.setStatus("dnd")
 });
 
@@ -23,6 +23,11 @@ client.user.setActivity(argresult , {type:'LISTENING'});
   client.user.setStatus("dnd")
     message.channel.send(` ${argresult} \` `)
 } else 
+  if (message.content.startsWith('Rpl')) {
+client.user.setActivity(argresult , {type:'PLAYING'});
+  client.user.setStatus("dnd")
+    message.channel.send(` ${argresult} \` `)
+} else 
 if (message.content.startsWith('Rst')) {
   client.user.setGame(argresult, "https://www.twitch.tv/MeeRcY");
   client.user.setStatus("dnd")
@@ -33,7 +38,7 @@ if (message.content.startsWith('Rst')) {
 client.on('message', message => {
         if (!developers.includes(message.author.id)) return;
   if (message.content === '..1') {
-  let channel = client.channels.get('5114568742819594250');
+  let channel = client.channels.get('511456874281959425');
 
   channel.join()
   .then(connection => console.log('Connected'))
